@@ -102,14 +102,14 @@ namespace CSharpExercises
             return Math.Round(fahrenheit,2);
          }
         // 10. Create a method called GetAverageHard that accepts an array of integers and returns the average value as a double. (No built in functions allowed)
-        public static double GetAverageHard(int[] array)
-        {
-            for(int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine(i);
-            }Console.WriteLine(array);
+   //     public static double GetAverageHard(int[] array)
+    //    {
+    //        for(int i = 0; i < array.Length; i++)
+    //        {
+    //            Console.WriteLine(i);
+    //        }Console.WriteLine(array);
            
-        }
+    //    }
         // 11. Create a method called GetAverageEasy that accepts an array of integers and returns the average value as a double. (Using only built in functions)
         // 12. Create a method called DrawTriangle that accepts two integers - number and width and returns a string containing a drawn triangle using the number parameter.
         /* e.g. Number: 8, Width: 8 should return
@@ -121,11 +121,36 @@ namespace CSharpExercises
          * 888
          * 88
          * 8 */
+       
 
         // 13. Create a method called GetMilesPerHour that accepts a double representing distance and three integers representing hours, minutes and seconds. The method should return the speed in MPH rounded to the nearest whole number as a string. (e.g. "55MPH")
 
 
         // 14. Create a method called IsVowel that accepts a char parameter and returns true if the parameter is a vowel or false if the parameter is a consonant.
+        public static bool IsVowel(char x)
+        {
+            if( x == 'a')
+            {
+                return true;
+            }
+             if( x == 'e')
+            {
+                return true;
+            }
+              if( x == 'o')
+            {
+                return true;
+            }
+               if( x == 'i')
+            {
+                return true;
+            }
+                if( x == 'u')
+            {
+                return true;
+            }
+            else { return false; }
+        }
         // 15. Create a method called IsConsonant that accepts a char parameter and returns true if the parameter is a consonant or false if the parameter is a vowel.
         // 16. The Collatz conjecture, named after Lothar Collatz of Germany, proposed the following conjecture in 1937. 
         // Beginning with an integer n > 1, repeat the following until n == 1. If n is even, halve it. If n is odd, triple it and add 1. Following these steps, the function will always arrive at the number 1.
