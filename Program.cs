@@ -28,9 +28,9 @@ namespace CSharpExercises
            // Assert("GetFirstName(\"Ann-Marie Simpson\" should return \"Ann-Marie\"", Exercises.GetFirstName("Ann-Marie Simpson") == "Ann-Marie");
             // Assert("ReverseStringHard() should reverse the string", Exercises.ReverseStringHard(Constants.Quote) == Constants.QuoteReversed);
             // Assert("ReverseStringEasy() should reverse the string", Exercises.ReverseStringEasy(Constants.Quote) == Constants.QuoteReversed);
-            Assert("PrintTimesTable(9) should print correctly", Exercises.PrintTimesTable(9) == Constants.TimesTableFor9);
-            //Assert("ConvertKelvinToFahrenheit(300) should return 80.33", Exercises.ConvertKelvinToFahrenheit(300) == 80.33);
-            //Assert("GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
+            // Assert("PrintTimesTable(9) should print correctly", Exercises.PrintTimesTable(9) == Constants.TimesTableFor9);
+            // Assert("ConvertKelvinToFahrenheit(300) should return 80.33", Exercises.ConvertKelvinToFahrenheit(300) == 80.33);
+            Assert("GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
             //Assert("GetAverageEasy(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageEasy(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
             //Assert("DrawTriangle(8, 5) should draw correctly", Exercises.DrawTriangle(8, 5) == Constants.TriangleFor8and5);
             //Assert("GetMilesPerHour(200, 2, 30, 45) should return \"80MPH\"", Exercises.GetMilesPerHour(200, 2, 30, 45) == "80MPH");

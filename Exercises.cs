@@ -82,17 +82,34 @@ namespace CSharpExercises
          * 10 * 10 = 10 */
         public static string PrintTimesTable(int x)
         {
-            string result = "";
-            for(int i=1; i <= x; i++)
-            {
-             result +=  x * i;
-                i++;
-            }
-            return result;
-        }    
+            string result ="";
+          
+           for(int i=1; i <= 10 ; i++){
+               
+            result += ($"{x} * {i} = {x*i}");
+            if(i < 10)
+                {
+                    result += "\r\n";
+                }
+            } 
+           Console.WriteLine(result);
+            return  result;
+        }
 
         // 9. Create a method called ConvertKelvinToFahrenheit that accepts a double representing a temperature in kelvin and returns a double containing the temperature in Fahrenheit.
+        public static double ConvertKelvinToFahrenheit(double kelvin){
+            double fahrenheit = (kelvin - 273.15) * 9/5 + 32;
+            return Math.Round(fahrenheit,2);
+         }
         // 10. Create a method called GetAverageHard that accepts an array of integers and returns the average value as a double. (No built in functions allowed)
+        public static double GetAverageHard(int[] array)
+        {
+            for(int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(i);
+            }Console.WriteLine(array);
+           
+        }
         // 11. Create a method called GetAverageEasy that accepts an array of integers and returns the average value as a double. (Using only built in functions)
         // 12. Create a method called DrawTriangle that accepts two integers - number and width and returns a string containing a drawn triangle using the number parameter.
         /* e.g. Number: 8, Width: 8 should return
