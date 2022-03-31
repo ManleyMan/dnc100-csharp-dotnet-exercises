@@ -152,10 +152,57 @@ namespace CSharpExercises
             else { return false; }
         }
         // 15. Create a method called IsConsonant that accepts a char parameter and returns true if the parameter is a consonant or false if the parameter is a vowel.
+        public static bool IsConsonant(char x)
+        {
+             if( x == 'a')
+            {
+                return false;
+            }
+             if( x == 'e')
+            {
+                return false;
+            }
+              if( x == 'o')
+            {
+                return false;
+            }
+               if( x == 'i')
+            {
+                return false;
+            }
+                if( x == 'u')
+            {
+                return false;
+            }
+            else { return true; }
+        }
         // 16. The Collatz conjecture, named after Lothar Collatz of Germany, proposed the following conjecture in 1937. 
         // Beginning with an integer n > 1, repeat the following until n == 1. If n is even, halve it. If n is odd, triple it and add 1. Following these steps, the function will always arrive at the number 1.
         // Create a method called CollatzConjecture that accepts an integer and returns the number of steps required to get to n == 1 as an integer.
+        public static int CollatzConjecture(int x)
+        {
+            int result = 0;
+            while (x > 1)
+            {
+                if(x == 1)
+                {
+                    break;
+                }
+                if((x % 2) == 0)
+                {
+                    result = x / 2;
+                    x = result;
+                }
+                else
+                {
+                    result = (x * 3) + 1;
+                    x = result;
+                }
 
+            }
+           // result = CollatzConjecture();
+            Console.WriteLine(result);
+        }
         // 17. Create a method called GetNext7Days that accepts a DateTime object and returns an array of DateTime objects containing the next 7 days (including the given day).
         // 18. Create a method called IsInLeapYear that accepts a DateTime object and returns true if the date falls within a leap year and false if not. (No built in functions allowed)
         // 19. Create a method called MortgageCalculator that accepts 2 decimals representing loan balance and interest rate, an integer representing loan term in years, and an integer representing the payment period.
