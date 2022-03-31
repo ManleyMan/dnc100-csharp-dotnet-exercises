@@ -181,6 +181,7 @@ namespace CSharpExercises
         // Create a method called CollatzConjecture that accepts an integer and returns the number of steps required to get to n == 1 as an integer.
         public static int CollatzConjecture(int x)
         {
+            int counter = 0;
             int result = 0;
             while (x > 1)
             {
@@ -192,18 +193,26 @@ namespace CSharpExercises
                 {
                     result = x / 2;
                     x = result;
+                    counter++;
                 }
                 else
                 {
                     result = (x * 3) + 1;
                     x = result;
+                    counter++;
                 }
-
             }
-           // result = CollatzConjecture();
-            Console.WriteLine(result);
+            return counter;
         }
         // 17. Create a method called GetNext7Days that accepts a DateTime object and returns an array of DateTime objects containing the next 7 days (including the given day).
+        public static DateTime[] GetNext7Days(DateTime date)
+        {
+          DateTime[] Dates = new DateTime[7];
+        for(int i = 0; i < 7; i++) { 
+                 Dates[i] = new DateTime(date.Year, date.Month, date.Day + i); 
+            }
+         return Dates;
+        }
         // 18. Create a method called IsInLeapYear that accepts a DateTime object and returns true if the date falls within a leap year and false if not. (No built in functions allowed)
         // 19. Create a method called MortgageCalculator that accepts 2 decimals representing loan balance and interest rate, an integer representing loan term in years, and an integer representing the payment period.
         /* Payment periods: 1 - Monthly, 2 - Bi-Monthly (Every 2 months) */
