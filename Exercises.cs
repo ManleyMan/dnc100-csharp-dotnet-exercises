@@ -214,8 +214,28 @@ namespace CSharpExercises
          return Dates;
         }
         // 18. Create a method called IsInLeapYear that accepts a DateTime object and returns true if the date falls within a leap year and false if not. (No built in functions allowed)
+        public static bool IsInLeapYear(int year)
+        {
+           if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
         // 19. Create a method called MortgageCalculator that accepts 2 decimals representing loan balance and interest rate, an integer representing loan term in years, and an integer representing the payment period.
         /* Payment periods: 1 - Monthly, 2 - Bi-Monthly (Every 2 months) */
+        public static double MortgageCalculator(double p, double r, int n, int PayPeriod)
+        {
+             n = n* PayPeriod;
+             r = r / 100 / PayPeriod;
+            double x = Math.Pow((1+r),n);
+            double mortgage = Math.Round((p*(r*x)/(x-1)),2);
+            return mortgage;
+        }
+       
 
         // 20. Create a method called DuckGoose that accepts an integer. Iterate from 1 to this integer, building a string along the way.
         // If the current number in the iteration:
@@ -223,6 +243,35 @@ namespace CSharpExercises
         //   Is divisible by 5, append "Goose" + Environment.NewLine; to the string.
         //   Is divisible by both 3 and 5, append "DuckGoose" + Environment.NewLine; to the string.
         //   Is none of the above, append the number as a string + Environment.NewLine; to the string.
+        public static string DuckGoose(int x)
+        {
+            
+            string result = "";
+            for(int i = 1; i <= x; i++)
+            {
+                if( i % 3 == 0)
+                {
+                     result += "Duck";
+                }
+                if( i % 5 == 0)
+                {
+                     result += "Goose";
+                }
+                else if( i % 3 == 0 && i % 5 == 0)
+                {
+                    result += "DuckGoose";
+                }
+                if( i % 3 != 0 && i % 5 != 0 )
+                {
+                    result += $"{i}";
+                }
+                if( i < x)
+                {
+                    result += "\r\n";
+                }
+            }
+            return result;
+        }
         /* Example - if the input to this method is 20, the following string should be returned
          * 1
          * 2
