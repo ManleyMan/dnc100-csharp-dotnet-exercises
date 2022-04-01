@@ -102,17 +102,25 @@ namespace CSharpExercises
             return Math.Round(fahrenheit,2);
          }
         // 10. Create a method called GetAverageHard that accepts an array of integers and returns the average value as a double. (No built in functions allowed)
-   //     public static double GetAverageHard(int[] array)
-    //    {
-    //        for(int i = 0; i < array.Length; i++)
-    //        {
-    //            Console.WriteLine(i);
-    //        }Console.WriteLine(array);
-           
-    //    }
+        public static double GetAverageHard(int[] array)
+        {
+            double avg = 0;
+            for(int i = 0; i < array.Length; i++)
+            {
+                avg += array[i];
+           }
+            avg = avg / array.Length;
+          Console.WriteLine(avg);
+         return avg;
+      }
         // 11. Create a method called GetAverageEasy that accepts an array of integers and returns the average value as a double. (Using only built in functions)
+         public static double GetAverageEasy(int[] array)
+        {
+          return Queryable.Average(array.AsQueryable());
+            
+      }
         // 12. Create a method called DrawTriangle that accepts two integers - number and width and returns a string containing a drawn triangle using the number parameter.
-        /* e.g. Number: 8, Width: 8 should return
+         /* e.g. Number: 8, Width: 8 should return
          * 88888888
          * 8888888
          * 888888
@@ -121,10 +129,45 @@ namespace CSharpExercises
          * 888
          * 88
          * 8 */
+       public static string DrawTriangle(int x, int y)
+        {
+         string result = "";      
+         int i, j, k ;  
+         for (i = 1; i <= y; i++)  
+         {  
+            for (j = 1; j <= y-i; j++)  
+            {  
+              
+            }  
+            for (k = 1; k <= j; k++)  
+            {  
+               result += ($"{x}");  
+            } 
+            if(i < y){ 
+            result += "\r\n"; 
+                }
+         }  
+         Console.WriteLine(result);
+            return result;
+        }
+       
        
 
         // 13. Create a method called GetMilesPerHour that accepts a double representing distance and three integers representing hours, minutes and seconds. The method should return the speed in MPH rounded to the nearest whole number as a string. (e.g. "55MPH")
-
+        public static string GetMilesPerHour(double distance, int h, int m, int s)
+        {
+            double timeSec;
+            double kph;
+           // double mps;
+            double mph;
+            timeSec = h + (m*60) + s;
+            mph = distance/timeSec;
+             kph = (distance/1000.0f)/(timeSec/3600.0f);
+            // mph = kph / 1.609f;
+         //   double mph = distance / (h+m+s);
+            Console.WriteLine(mph);
+            return mph.ToString("MPH");
+        }
 
         // 14. Create a method called IsVowel that accepts a char parameter and returns true if the parameter is a vowel or false if the parameter is a consonant.
         public static bool IsVowel(char x)

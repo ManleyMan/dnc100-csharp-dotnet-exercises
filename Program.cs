@@ -30,10 +30,10 @@ namespace CSharpExercises
             // Assert("ReverseStringEasy() should reverse the string", Exercises.ReverseStringEasy(Constants.Quote) == Constants.QuoteReversed);
             // Assert("PrintTimesTable(9) should print correctly", Exercises.PrintTimesTable(9) == Constants.TimesTableFor9);
             // Assert("ConvertKelvinToFahrenheit(300) should return 80.33", Exercises.ConvertKelvinToFahrenheit(300) == 80.33);
-            //Assert("GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
-            //Assert("GetAverageEasy(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageEasy(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
-            //Assert("DrawTriangle(8, 5) should draw correctly", Exercises.DrawTriangle(8, 5) == Constants.TriangleFor8and5);
-            //Assert("GetMilesPerHour(200, 2, 30, 45) should return \"80MPH\"", Exercises.GetMilesPerHour(200, 2, 30, 45) == "80MPH");
+            // Assert("GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageHard(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
+            // Assert("GetAverageEasy(new int[] { 10, 20, 30, 40, 50, 60, 80 }) should return 41.428571428571431", Exercises.GetAverageEasy(new int[] { 10, 20, 30, 40, 50, 60, 80 }) == 41.428571428571431);
+           // Assert("DrawTriangle(8, 5) should draw correctly", Exercises.DrawTriangle(8, 5) == Constants.TriangleFor8and5);
+            Assert("GetMilesPerHour(200, 2, 30, 45) should return \"80MPH\"", Exercises.GetMilesPerHour(200, 2, 30, 45) == "80MPH");
             //Assert("GetMilesPerHour(200, 2, 29, 0) should return \"81MPH\"", Exercises.GetMilesPerHour(200, 2, 29, 0) == "81MPH");
             // Assert("IsVowel('a') should return true", Exercises.IsVowel('a') == true);
            // Assert("IsVowel('e') should return true", Exercises.IsVowel('e') == true);
@@ -59,7 +59,7 @@ namespace CSharpExercises
             // Assert("IsInLeapYear(1900) should return false", Exercises.IsInLeapYear(1900) == false);
             // Assert("IsInLeapYear(1901) should return false", Exercises.IsInLeapYear(1901) == false);
            // Assert("MortgageCalculator(300000, 3.8, 30, 12) should return 1397.87", Exercises.MortgageCalculator(300000, 3.8, 30, 12) == 1397.87);
-            Assert("DuckGoose(100) should print correctly", Exercises.DuckGoose(100) == Constants.DuckGooseResult);
+            // Assert("DuckGoose(100) should print correctly", Exercises.DuckGoose(100) == Constants.DuckGooseResult);
 
             /* Prompt user to exit */
             Console.WriteLine("Press any key to exit");
